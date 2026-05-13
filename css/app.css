@@ -254,3 +254,64 @@ html, body, #map {
 #placesTablePanel.collapsed .places-table-header {
   border-bottom: none;
 }
+@media (max-width: 768px) {
+
+  #placesTablePanel {
+    width: calc(100vw - 12px);
+    right: 6px;
+    left: 6px;
+    bottom: 6px;
+    max-height: 38vh;
+    border-radius: 8px;
+  }
+
+  #placesTableBodyWrap {
+    max-height: calc(38vh - 32px);
+  }
+
+  .places-table {
+    font-size: 11px;
+  }
+
+  .places-table th,
+  .places-table td {
+    padding: 2px 4px;
+  }
+
+  .places-table-header {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+
+  #placesTableToggle {
+    font-size: 11px;
+    padding: 1px 6px;
+  }
+
+  .badge-selector-bar {
+    top: 68px;
+    right: 8px;
+    left: 8px;
+  }
+
+  .badge-selector-bar-inner {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  #badgeSelect {
+    min-width: 140px;
+    font-size: 13px;
+  }
+
+  .map-header-box {
+    font-size: 16px;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .header-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
