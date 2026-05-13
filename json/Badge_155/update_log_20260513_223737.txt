@@ -1,0 +1,14 @@
+﻿Started: 2026-05-13 22:37:37
+Map type: Badge
+Source  : G:\My Drive\Sfirat_Yeelim\Exports\KML\Badge_Export\Badge_155.kml
+Output  : G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\Badge_155
+Count   : 1
+OVERWRITE: existing target will be replaced: G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\Badge_155\data.geojson
+OK: Badge_155.kml -> data.geojson
+Duplicate features removed from data.geojson: 6
+Title: מפה אישית עבור יעל # 155 עם נלווים
+Public Badge added to badges.json: Badge_155
+Public Badge indexes updated. badges.json=G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\badges.json
+Finished: 2026-05-13 22:37:38
+Success : 1
+Failed  : 0
