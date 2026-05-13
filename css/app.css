@@ -157,12 +157,24 @@ html, body, #map {
 }
 
 .badge-selector-bar {
-  direction: rtl;
-  text-align: center;
-  padding: 8px;
-  background: #f7f7f7;
-  border-bottom: 1px solid #ddd;
+  position: absolute;
+  z-index: 1000;
+  top: 80px;
+  right: 70px;
+  left: 70px;
+  display: flex;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.badge-selector-bar-inner {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 6px 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
   font-family: Arial, sans-serif;
+  font-size: 15px;
 }
 
 .badge-selector-bar label {
