@@ -1,10 +1,42 @@
-[
-  { "badge": "1", "folder": "Badge_1", "name": "" },
-  { "badge": "2", "folder": "Badge_2", "name": "" },
-  { "badge": "7", "folder": "Badge_7", "name": "" },
-  { "badge": "1160", "folder": "Badge_1160", "name": "" },
-  { "badge": "1497", "folder": "Badge_1497", "name": "" },
-  { "badge": "1512", "folder": "Badge_1512", "name": "" },
-  { "badge": "6544", "folder": "Badge_6544", "name": "" },
-  { "badge": "7760", "folder": "Badge_7760", "name": "" }
+﻿[
+    {
+        "badge":  "1",
+        "folder":  "Badge_1",
+        "name":  ""
+    },
+    {
+        "badge":  "2",
+        "folder":  "Badge_2",
+        "name":  ""
+    },
+    {
+        "badge":  "7",
+        "folder":  "Badge_7",
+        "name":  "סבתא וסבא"
+    },
+    {
+        "badge":  "1160",
+        "folder":  "Badge_1160",
+        "name":  "מאיר קפויה"
+    },
+    {
+        "badge":  "1497",
+        "folder":  "Badge_1497",
+        "name":  "יואל גאל-דור"
+    },
+    {
+        "badge":  "1512",
+        "folder":  "Badge_1512",
+        "name":  "רווית גולן בן זאב"
+    },
+    {
+        "badge":  "6544",
+        "folder":  "Badge_6544",
+        "name":  "אילן וקנין"
+    },
+    {
+        "badge":  "7760",
+        "folder":  "Badge_7760",
+        "name":  "ניצן שגב"
+    }
 ]
