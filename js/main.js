@@ -22,9 +22,9 @@ async function loadBadgesIndexToSelect() {
     const option = document.createElement("option");
 
     option.value = badgeNo;
-    option.textContent = name
-      ? `${name} - #${badgeNo}`
-      : `יעל #${badgeNo}`;
+	option.textContent = name
+	  ? `יעל #${badgeNo} - ${name}`
+	  : `יעל #${badgeNo}`;
 
     if (badgeNo === badge) {
       option.selected = true;
@@ -32,7 +32,17 @@ async function loadBadgesIndexToSelect() {
 
     select.appendChild(option);
   });
+  
+select.onchange = function () {
+  const selectedBadge = this.value;
+  if (!selectedBadge) return;
 
+  const url = new URL(window.location.href);
+  url.searchParams.set("badge", selectedBadge);
+
+  window.location.href = url.toString();
+};
+  
   console.log("רשימת Badge נטענה לתפריט:", badges);
 }
 
