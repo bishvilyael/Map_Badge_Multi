@@ -155,3 +155,23 @@ html, body, #map {
   font-size: 10px;
   font-weight: bold;
 }
+
+.badge-selector-bar {
+  direction: rtl;
+  text-align: center;
+  padding: 8px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.badge-selector-bar label {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+#badgeSelect {
+  min-width: 220px;
+  padding: 4px 8px;
+  font-size: 15px;
+}
