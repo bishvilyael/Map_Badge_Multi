@@ -1,4 +1,4 @@
-async function testLoadBadgesIndex() {
+async function loadBadgesIndexToSelect() {
   const response = await fetch("json/badges.json", { cache: "no-store" });
 
   if (!response.ok) {
@@ -11,12 +11,34 @@ async function testLoadBadgesIndex() {
     throw new Error("badges.json לא תקין");
   }
 
-  console.log("badges.json נטען בהצלחה:", badges);
+  const select = document.getElementById("badgeSelect");
+  if (!select) return;
+
+  select.innerHTML = "";
+
+  badges.forEach(item => {
+    const badgeNo = item.badge || "";
+    const name = item.name || "";
+    const option = document.createElement("option");
+
+    option.value = badgeNo;
+    option.textContent = name
+      ? `${name} - #${badgeNo}`
+      : `יעל #${badgeNo}`;
+
+    if (badgeNo === badge) {
+      option.selected = true;
+    }
+
+    select.appendChild(option);
+  });
+
+  console.log("רשימת Badge נטענה לתפריט:", badges);
 }
 
 (async function () {
   try {
-    await testLoadBadgesIndex();
+    await loadBadgesIndexToSelect();
 
     await loadBadgeTitle();
     await loadBadgeGeoJson();
