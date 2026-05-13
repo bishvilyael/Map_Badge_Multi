@@ -50,8 +50,12 @@ select.onchange = function () {
   try {
     await loadBadgesIndexToSelect();
 
-    await loadBadgeTitle();
-    await loadBadgeGeoJson();
+    if (badge) {
+      await loadBadgeTitle();
+      await loadBadgeGeoJson();
+    } else {
+      updateHeaderTitle();
+    }
   } catch (err) {
     console.error(err);
     document.getElementById("mapTitleText").textContent =

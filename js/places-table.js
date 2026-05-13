@@ -32,12 +32,20 @@ function renderPlacesTable() {
     `;
     document.body.appendChild(panel);
 
-    document.getElementById("placesTableToggle").onclick = function () {
-      const wrap = document.getElementById("placesTableBodyWrap");
-      const hidden = wrap.style.display === "none";
-      wrap.style.display = hidden ? "block" : "none";
-      this.textContent = hidden ? "הסתר" : "הצג";
-    };
+	document.getElementById("placesTableToggle").onclick = function () {
+	  const wrap = document.getElementById("placesTableBodyWrap");
+	  const hidden = wrap.style.display === "none";
+
+	  wrap.style.display = hidden ? "block" : "none";
+	  this.textContent = hidden ? "הסתר" : "הצג";
+
+	  panel.classList.toggle("collapsed", !hidden);
+	  panel.style.top = "";
+	  panel.style.left = "";
+	  panel.style.right = "10px";
+	  panel.style.bottom = "25px";
+	};
+	makePlacesTableDraggable(panel);
   }
 
   const tbody = document.getElementById("placesTableBody");
@@ -66,11 +74,56 @@ function renderPlacesTable() {
       if (e.target.tagName.toLowerCase() === "a") return;
 
       if (row.latlng && row.marker) {
-        map.setView(row.latlng, 17);
-        row.marker.openPopup();
+        map.setView(row.latlng, 15);
+        //row.marker.openPopup();
       }
     };
 
     tbody.appendChild(tr);
+  });
+}
+function makePlacesTableDraggable(panel) {
+  const header = panel.querySelector(".places-table-header");
+  if (!header) return;
+
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let startLeft = 0;
+  let startTop = 0;
+
+  header.style.cursor = "move";
+
+  header.addEventListener("mousedown", function (e) {
+    if (e.target.tagName.toLowerCase() === "button") return;
+
+    isDragging = true;
+
+    const rect = panel.getBoundingClientRect();
+    startX = e.clientX;
+    startY = e.clientY;
+    startLeft = rect.left;
+    startTop = rect.top;
+
+    panel.style.left = `${startLeft}px`;
+    panel.style.top = `${startTop}px`;
+    panel.style.right = "auto";
+    panel.style.bottom = "auto";
+
+    e.preventDefault();
+  });
+
+  document.addEventListener("mousemove", function (e) {
+    if (!isDragging) return;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    panel.style.left = `${startLeft + dx}px`;
+    panel.style.top = `${startTop + dy}px`;
+  });
+
+  document.addEventListener("mouseup", function () {
+    isDragging = false;
   });
 }

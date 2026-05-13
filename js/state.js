@@ -1,10 +1,5 @@
 const params = new URLSearchParams(window.location.search);
-const badge = params.get("badge") || params.get("Badge");
-
-if (!badge) {
-  document.getElementById("mapTitleText").textContent = "חסר badge";
-  throw new Error("Missing badge");
-}
+const badge = params.get("badge") || params.get("Badge") || "";
 
 const map = L.map("map", {
   preferCanvas: true,
@@ -17,5 +12,9 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxNativeZoom: 19
 }).addTo(map);
 
-let mapTitle = `מפה אישית עבור יעל # ${badge}`;
+let mapTitle = badge
+  ? `מפה אישית עבור יעל # ${badge}`
+  : "בחר יעל מהרשימה";
+
 let currentTotalCount = null;
+let badgePointRows = [];

@@ -246,3 +246,11 @@ html, body, #map {
 .places-table tbody tr:hover {
   background: #eef6ff;
 }
+#placesTablePanel.collapsed {
+  width: 180px;
+  max-height: none;
+}
+
+#placesTablePanel.collapsed .places-table-header {
+  border-bottom: none;
+}
