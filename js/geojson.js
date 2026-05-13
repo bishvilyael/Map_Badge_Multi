@@ -14,6 +14,7 @@ async function loadBadgeGeoJson() {
   const mainLayer = L.layerGroup();
   const otherLayer = L.layerGroup();
   const allBounds = [];
+  badgePointRows = [];
 
   data.features.forEach(feature => {
     const latlng = getFeatureLatLng(feature);
@@ -32,7 +33,19 @@ async function loadBadgeGeoJson() {
       `<div class="popup-wrap"><div class="popup-title">${escapeHtml(name)}</div><div class="popup-body">${descriptionHtml}</div></div>`,
       { maxWidth: 340, minWidth: 220 }
     );
+	
+	const details = extractPointDetailsFromDescription(descriptionHtml);
 
+	badgePointRows.push({
+	  date: details.date,
+	  badgeNo: name,
+	  name: details.name,
+	  place: details.place,
+	  fbUrl: details.fbUrl,
+	  latlng: latlng,
+	  marker: marker
+	});
+	
     if (isMain) {
       marker.addTo(mainLayer);
     } else {
@@ -59,6 +72,7 @@ async function loadBadgeGeoJson() {
       [`נלווים (${otherCount})`]: otherLayer
     }, { collapsed: false }).addTo(map);
   }
+  renderPlacesTable();
   fitIsraelView();
 }
 
