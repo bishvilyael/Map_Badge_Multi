@@ -55,7 +55,7 @@ function createMarkerIcon(labelText, isMain) {
     popupAnchor: [0, -11]
   });
 }
-function extractPointDetailsFromDescription(html) {
+function extractPointDetailsFromDescriptionY(html) {
   const temp = document.createElement("div");
   temp.innerHTML = html || "";
 
