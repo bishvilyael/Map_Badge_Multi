@@ -1,0 +1,12 @@
+﻿Started: 2026-05-22 21:26:08
+Map type: Badge
+Source  : work_requests\Req_8_Badge_3\02_kml\Badge_3.kml
+Output  : G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\Badge_3
+Count   : 1
+OK: Badge_3.kml -> data.geojson
+Title: מפה אישית עבור יעל # 3 עם נלווים
+Public Badge added to badges.json: Badge_3
+Public Badge indexes updated. badges.json=G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\badges.json
+Finished: 2026-05-22 21:26:09
+Success : 1
+Failed  : 0
