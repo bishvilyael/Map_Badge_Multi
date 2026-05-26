@@ -1,0 +1,13 @@
+﻿Started: 2026-05-26 07:27:21
+Map type: Badge
+Source  : work_requests\Req_13_Badge_1401\02_kml\Badge_1401.kml
+Output  : G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\Badge_1401
+Count   : 1
+OK: Badge_1401.kml -> data.geojson
+Duplicate features removed from data.geojson: 2
+Title: מפה אישית עבור יעל # 1401 עם נלווים
+Public Badge added to badges.json: Badge_1401
+Public Badge indexes updated. badges.json=G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\badges.json
+Finished: 2026-05-26 07:27:22
+Success : 1
+Failed  : 0
