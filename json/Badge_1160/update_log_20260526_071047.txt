@@ -1,0 +1,13 @@
+﻿Started: 2026-05-26 07:10:47
+Map type: Badge
+Source  : G:\My Drive\Sfirat_Yeelim\Exports\KML\Badge_Export\Badge_1160.kml
+Output  : G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\Badge_1160
+Count   : 1
+OVERWRITE: existing target will be replaced: G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\Badge_1160\data.geojson
+OK: Badge_1160.kml -> data.geojson
+Title: מפה אישית עבור יעל # 1160 עם נלווים
+Public Badge updated in badges.json: Badge_1160
+Public Badge indexes updated. badges.json=G:\My Drive\Sfirat_Yeelim\Exports\RIPOS\Map_Badge_Multi\json\badges.json
+Finished: 2026-05-26 07:10:48
+Success : 1
+Failed  : 0
